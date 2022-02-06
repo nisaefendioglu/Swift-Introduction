@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     
+    
     @IBAction func sumClicked(_ sender: Any) {
         
         //let firstNumber = Int(firstText.text!)! ilk ! -> veri gelecek, ikinci ! -> gelen veri int e çevrilebilir.
