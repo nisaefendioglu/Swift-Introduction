@@ -6,3 +6,4 @@ The repo I will use in my process of learning Swift language.
 - [Layout](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/Layout)
 - [Design with Code](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/Design%20with%20code)
 - [SwiftUI Intro](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/SwiftUI)
+- [Saving and Deleting Small Data within the Application](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/BirthdayNoteTaker)
