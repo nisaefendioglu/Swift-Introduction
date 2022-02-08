@@ -7,3 +7,5 @@ The repo I will use in my process of learning Swift language.
 - [Design with Code](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/Design%20with%20code)
 - [SwiftUI Intro](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/SwiftUI)
 - [Saving and Deleting Small Data within the Application](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/BirthdayNoteTaker)
+- [Seque](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/SegueApp)
+- [Swift Lifecycle](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/LifeCycle)
