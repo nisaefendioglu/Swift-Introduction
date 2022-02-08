@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         birthdayLabel.text = "Birthday : \(birthdayTextField.text!)"
     }
     
-    
     @IBAction func deleteClicked(_ sender: Any) {
         
         let storedName = UserDefaults.standard.object(forKey: "name")
