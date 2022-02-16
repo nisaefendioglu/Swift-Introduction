@@ -9,3 +9,5 @@ The repo I will use in my process of learning Swift language.
 - [Saving and Deleting Small Data within the Application](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/BirthdayNoteTaker)
 - [Segue](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/SegueApp)
 - [Swift Lifecycle](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/LifeCycle)
+- [Alert](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/Alert%20Project)
+- [Gesture Recognizer](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/GestureRecognizer)
