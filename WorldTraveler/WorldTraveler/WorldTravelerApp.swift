@@ -15,14 +15,14 @@ struct WorldTravelerApp: App {
                 ContentView()
                     .tabItem{
                         HStack{
-                            Text("Conversion")
+                            Text("TAB_CONVERSION")
                             Image(systemName: "thermometer")
                         }
                     }
                 MapView()
                     .tabItem{
                         HStack{
-                            Text("Map")
+                            Text("TAB_MAP")
                             Image(systemName: "map")
                         }
                     }

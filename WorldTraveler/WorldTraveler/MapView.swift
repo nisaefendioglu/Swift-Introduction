@@ -27,8 +27,8 @@ struct MapView: View {
             .overlay(
                 VStack{
                 Picker("Picker", selection: $selectedIndex, content:{
-                    Text("İstanbul").tag(0)
-                    Text("London").tag(1)
+                    Text("MAP_CITY_ISTANBUL").tag(0)
+                    Text("MAP_CITY_LONDON").tag(1)
                 }).pickerStyle(SegmentedPickerStyle())
                   .padding()
                   .onChange(of: selectedIndex, perform:{

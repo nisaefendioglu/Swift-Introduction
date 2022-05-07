@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4493C37C2826D35300902ACD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493C37B2826D35300902ACD /* MapView.swift */; };
+		4493C37F2826DB8600902ACD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4493C3812826DB8600902ACD /* Localizable.strings */; };
+		4493C3852826DEBA00902ACD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4493C3872826DEBA00902ACD /* InfoPlist.strings */; };
 		44F2873F2825761E008B61F8 /* WorldTravelerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F2873E2825761E008B61F8 /* WorldTravelerApp.swift */; };
 		44F287412825761E008B61F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F287402825761E008B61F8 /* ContentView.swift */; };
 		44F287432825761F008B61F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F287422825761F008B61F8 /* Assets.xcassets */; };
@@ -16,6 +18,10 @@
 
 /* Begin PBXFileReference section */
 		4493C37B2826D35300902ACD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4493C3802826DB8600902ACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4493C3822826DDC900902ACD /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4493C3862826DEBA00902ACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4493C3882826EEDB00902ACD /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44F2873B2825761E008B61F8 /* WorldTraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTraveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F2873E2825761E008B61F8 /* WorldTravelerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTravelerApp.swift; sourceTree = "<group>"; };
 		44F287402825761E008B61F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 				44F2873E2825761E008B61F8 /* WorldTravelerApp.swift */,
 				44F287402825761E008B61F8 /* ContentView.swift */,
 				4493C37B2826D35300902ACD /* MapView.swift */,
+				4493C3872826DEBA00902ACD /* InfoPlist.strings */,
+				4493C3812826DB8600902ACD /* Localizable.strings */,
 				44F287422825761F008B61F8 /* Assets.xcassets */,
 				44F287442825761F008B61F8 /* Preview Content */,
 			);
@@ -112,6 +120,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 44F287322825761E008B61F8;
 			productRefGroup = 44F2873C2825761E008B61F8 /* Products */;
@@ -129,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F287462825761F008B61F8 /* Preview Assets.xcassets in Resources */,
+				4493C3852826DEBA00902ACD /* InfoPlist.strings in Resources */,
+				4493C37F2826DB8600902ACD /* Localizable.strings in Resources */,
 				44F287432825761F008B61F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +158,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4493C3812826DB8600902ACD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4493C3802826DB8600902ACD /* en */,
+				4493C3822826DDC900902ACD /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4493C3872826DEBA00902ACD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4493C3862826DEBA00902ACD /* en */,
+				4493C3882826EEDB00902ACD /* tr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		44F287472825761F008B61F8 /* Debug */ = {
