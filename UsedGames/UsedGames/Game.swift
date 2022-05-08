@@ -8,7 +8,7 @@
 import Foundation
 
 //en tepedeki hali.
-class Game: NSObject {
+class Game: NSObject, Identifiable {
     
     var name: String
     var priceInDollars: Double
