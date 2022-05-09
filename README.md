@@ -11,6 +11,7 @@ The repo I will use in my process of learning Swift language.
 - [Swift Lifecycle](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/LifeCycle)
 - [Alert](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/Alert%20Project)
 - [Gesture Recognizer](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/GestureRecognizer)
-- [Catch The Kenny Game](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/CatchTheKennyGame)
+- [Catch The Kenny Game App](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/CatchTheKennyGame)
 - [Swift UI](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/MyFirstSwiftUI)
 - [General Information for Swift](https://github.com/nisaefendioglu/Swift-Introduction/blob/master/MyPlayground.playground/Contents.swift)
+- [World Traveler App](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/WorldTraveler)
