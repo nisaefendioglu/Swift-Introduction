@@ -13,4 +13,4 @@ The repo I will use in my process of learning Swift language.
 - [Gesture Recognizer](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/GestureRecognizer)
 - [Catch The Kenny Game](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/CatchTheKennyGame)
 - [Swift UI](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/MyFirstSwiftUI)
-
+- [General Information for Swift](https://github.com/nisaefendioglu/Swift-Introduction/blob/master/MyPlayground.playground/Contents.swift)
