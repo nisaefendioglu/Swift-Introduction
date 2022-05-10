@@ -15,4 +15,4 @@ The repo I will use in my process of learning Swift language.
 - [Swift UI](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/MyFirstSwiftUI)
 - [General Information for Swift](https://github.com/nisaefendioglu/Swift-Introduction/blob/master/MyPlayground.playground/Contents.swift)
 - [World Traveler App](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/WorldTraveler)
-- [Used Games](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/WorldTraveler)
+- [Used Games](https://github.com/nisaefendioglu/Swift-Introduction/tree/master/UsedGames)
