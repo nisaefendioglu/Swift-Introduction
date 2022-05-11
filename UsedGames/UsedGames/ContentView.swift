@@ -24,6 +24,7 @@ struct ContentView: View {
     ForEach(gameStore.games) { (game) in
         GameListItem(game: game)
         }
+    .animation(.easeIn)
       }
    }
 }
