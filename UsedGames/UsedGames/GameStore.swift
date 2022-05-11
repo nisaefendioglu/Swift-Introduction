@@ -7,9 +7,9 @@
 
 import Foundation
 
-class GameStore {
+class GameStore : ObservableObject {
     
-    var games: [Game] = []
+    @Published var games: [Game] = []
     
     init() {
         

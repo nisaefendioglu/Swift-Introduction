@@ -9,15 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let gameStore = GameStore()
+    @ObservedObject var gameStore = GameStore()
     
     var body: some View {
-        List(gameStore.games) { (game) in
-            GameListItem(game: game)
-        }
-    }
+        List {
+            HStack {
+            Spacer()
+                Button(action: {
+                gameStore.createGame()
+            }, label: {
+            Text("Add")
+    }).buttonStyle(BorderlessButtonStyle())
 }
-
+    ForEach(gameStore.games) { (game) in
+        GameListItem(game: game)
+        }
+      }
+   }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
