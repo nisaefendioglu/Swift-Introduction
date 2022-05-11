@@ -13,19 +13,26 @@ struct ContentView: View {
     
     var body: some View {
         List {
-            HStack {
-            Spacer()
-                Button(action: {
-                gameStore.createGame()
-            }, label: {
-            Text("Add")
-    }).buttonStyle(BorderlessButtonStyle())
-}
-    ForEach(gameStore.games) { (game) in
-        GameListItem(game: game)
+            ForEach(gameStore.games) { (game) in
+            GameListItem(game: game)
         }
-    .animation(.easeIn)
-      }
+        }.padding(.top)
+                .animation(.easeIn, value: gameStore.games)
+                .overlay(
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                gameStore.createGame()
+                            }, label: {
+                                Text("Add")
+                            }).buttonStyle(BorderlessButtonStyle())
+                        }
+                        .padding()
+                        .background(Color.white.edgesIgnoringSafeArea(.top))
+                        Spacer()
+                    }
+                )
    }
 }
 struct ContentView_Previews: PreviewProvider {
