@@ -20,7 +20,13 @@ struct ContentView: View {
                 indexSet in
                 gameStore.delete(at: indexSet)
             })
-        }.padding(.top)
+            .onMove (perform: {
+                indices,
+                newOffSet in
+                gameStore.move(indices: indices, to: newOffSet)
+            }
+        )
+    }.padding(.top)
                 .animation(.easeIn, value: gameStore.games)
                 .overlay(
                     VStack {
