@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var gameStore = GameStore()
+    @State var gameToDelete: Game?
     
     var body: some View {
         List {
@@ -18,7 +19,7 @@ struct ContentView: View {
         }
             .onDelete(perform: {
                 indexSet in
-                gameStore.delete(at: indexSet)
+                self.gameToDelete = gameStore.game(at: indexSet)
             })
             .onMove (perform: {
                 indices,
@@ -43,9 +44,21 @@ struct ContentView: View {
                         .background(Color.white.edgesIgnoringSafeArea(.top))
                         Spacer()
                     }
-                )
-   }
-}
+                ).actionSheet(item: $gameToDelete) { (game) -> ActionSheet in
+                    ActionSheet(
+                        title: Text("Are you sure?"),
+                        message: Text("You will delete \(game.name)"),
+                        buttons: [
+                            .cancel(),
+                            .destructive(Text("Delete"), action: {
+                                if let indexSet = gameStore.indexSet(for: game) {
+                                    gameStore.delete(at: indexSet)
+                                }
+                            })
+                        ])
+                }
+        }
+    }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
