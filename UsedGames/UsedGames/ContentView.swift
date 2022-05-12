@@ -16,11 +16,16 @@ struct ContentView: View {
             ForEach(gameStore.games) { (game) in
             GameListItem(game: game)
         }
+            .onDelete(perform: {
+                indexSet in
+                gameStore.delete(at: indexSet)
+            })
         }.padding(.top)
                 .animation(.easeIn, value: gameStore.games)
                 .overlay(
                     VStack {
                         HStack {
+                            EditButton()
                             Spacer()
                             Button(action: {
                                 gameStore.createGame()
