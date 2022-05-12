@@ -70,6 +70,7 @@ struct GameListItem: View {
             Text(NSNumber(value: game.priceInDollars), formatter: numberFormatter)
                 .font(.title2)
                 .foregroundColor(game.priceInDollars > 30 ? .blue : .gray)
+                .animation(nil)
             
         }
         .padding(.vertical, 6)
