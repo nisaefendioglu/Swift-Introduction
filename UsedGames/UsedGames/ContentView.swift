@@ -10,13 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var gameStore = GameStore()
+    
     @State var gameToDelete: Game?
+    
+    @ObservedObject var imageStore = ImageStore()
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(gameStore.games) { (game) in
-                    NavigationLink(destination : DetailView(game: game, gameStore: gameStore, name: game.name, price: game.priceInDollars)){
+                    NavigationLink(destination : DetailView(game: game, gameStore: gameStore, imageStore: imageStore, name: game.name, price: game.priceInDollars,           selectedPhoto: imageStore.image(forKey: game.itemKey)
+                    )){
                         GameListItem(game: game)
                     }
             }

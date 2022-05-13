@@ -11,6 +11,9 @@
 		44726EE5282E612200201A1F /* Color+UsedGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EE4282E612200201A1F /* Color+UsedGames.swift */; };
 		44726EE7282E632D00201A1F /* GameListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EE6282E632D00201A1F /* GameListItem.swift */; };
 		44726EE9282E6A0B00201A1F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EE8282E6A0B00201A1F /* DetailView.swift */; };
+		44726EEB282E741900201A1F /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EEA282E741900201A1F /* PhotoPicker.swift */; };
+		44726EED282E76E800201A1F /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EEC282E76E800201A1F /* ImageStore.swift */; };
+		44726EEF282E773400201A1F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44726EEE282E773400201A1F /* SwiftUIView.swift */; };
 		448A953028282891009A4166 /* UsedGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A952F28282891009A4166 /* UsedGamesApp.swift */; };
 		448A953228282891009A4166 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A953128282891009A4166 /* ContentView.swift */; };
 		448A953428282892009A4166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448A953328282892009A4166 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 		44726EE4282E612200201A1F /* Color+UsedGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UsedGames.swift"; sourceTree = "<group>"; };
 		44726EE6282E632D00201A1F /* GameListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListItem.swift; sourceTree = "<group>"; };
 		44726EE8282E6A0B00201A1F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		44726EEA282E741900201A1F /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		44726EEC282E76E800201A1F /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		44726EEE282E773400201A1F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		448A952C28282891009A4166 /* UsedGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsedGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448A952F28282891009A4166 /* UsedGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedGamesApp.swift; sourceTree = "<group>"; };
 		448A953128282891009A4166 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,10 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				448A952F28282891009A4166 /* UsedGamesApp.swift */,
+				44726EEA282E741900201A1F /* PhotoPicker.swift */,
+				44726EEC282E76E800201A1F /* ImageStore.swift */,
 				448A953F28282ECC009A4166 /* GameStore.swift */,
 				44726EE4282E612200201A1F /* Color+UsedGames.swift */,
 				448A953128282891009A4166 /* ContentView.swift */,
 				44726EE6282E632D00201A1F /* GameListItem.swift */,
+				44726EEE282E773400201A1F /* SwiftUIView.swift */,
 				44726EE8282E6A0B00201A1F /* DetailView.swift */,
 				448A953D282829C4009A4166 /* Game.swift */,
 				448A95412828361A009A4166 /* UsedGames+Formatter.swift */,
@@ -161,6 +170,9 @@
 			files = (
 				448A953228282891009A4166 /* ContentView.swift in Sources */,
 				44726EE9282E6A0B00201A1F /* DetailView.swift in Sources */,
+				44726EEF282E773400201A1F /* SwiftUIView.swift in Sources */,
+				44726EEB282E741900201A1F /* PhotoPicker.swift in Sources */,
+				44726EED282E76E800201A1F /* ImageStore.swift in Sources */,
 				448A954028282ECC009A4166 /* GameStore.swift in Sources */,
 				44726EE7282E632D00201A1F /* GameListItem.swift in Sources */,
 				44726EE5282E612200201A1F /* Color+UsedGames.swift in Sources */,

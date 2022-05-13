@@ -14,6 +14,8 @@ class Game: NSObject, Identifiable {
     var priceInDollars: Double
     var serialNumber: String
     var dateCreated: Date
+    let itemKey: String
+
     
     init(name: String, priceInDollars: Double, serialNumber: String){
         
@@ -21,6 +23,7 @@ class Game: NSObject, Identifiable {
         self.priceInDollars = priceInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
         
     }
     

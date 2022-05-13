@@ -12,13 +12,47 @@ struct DetailView: View {
     
     var game : Game
     var gameStore : GameStore
+    var imageStore: ImageStore
+
     @State var name : String = ""
     @State var price : Double = 0.0
-    @State var shouldEnableSaveButton: Bool = true
+    @State var shouldEnableSaveButton: Bool = false
+    @State var isPhotoPickerPresenting = false
+    @State var isPhotoPickerActionSheetPresenting = false
+    @State var selectedPhoto: UIImage?
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     func validate() {
         shouldEnableSaveButton = game.name != name || game.priceInDollars != price
     }
+    
+    func createActionSheet() -> ActionSheet {
+            var buttons: [ActionSheet.Button] = [
+                .cancel()
+            ]
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                buttons.append(.default(
+                    Text("Camera"),
+                    action:  {
+                        sourceType = .camera
+                        isPhotoPickerPresenting = true
+                    }
+                ))
+            }
+            
+            if UIImagePickerController.isSourceTypeAvailable((.photoLibrary)) {
+                buttons.append(.default(
+                    Text("Photo Library"),
+                    action:  {
+                        sourceType = .photoLibrary
+                        isPhotoPickerPresenting = true
+                    }
+                ))
+            }
+            
+            return ActionSheet(title: Text("Please select a source"), message: nil, buttons: buttons)
+        }
     
     var body: some View {
         Form {
@@ -50,28 +84,60 @@ struct DetailView: View {
                         )
                 }.padding(.vertical, 4.0)
             }
-            
-            Section {
-                Button(action: {
-                    
-                    let newGame = Game(name: name, priceInDollars: price, serialNumber: game.serialNumber)
-                    gameStore.update(game: game, newValue: newGame)
-                    
-                }, label: {
-                    Text("Save")
-                        .frame(maxWidth : .infinity)
-                        .frame(height: 50.0)
-                })
-                .disabled(!shouldEnableSaveButton)
-            }
-        }.navigationBarTitleDisplayMode(.inline)
+            if let selectedPhoto = selectedPhoto {
+                            Section(header: Text("Image")) {
+                                Image(uiImage: selectedPhoto)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.vertical)
+                            }
+                        }
+                        Section {
+                            Button(action: {
+                                let newGame = Game(name: name, priceInDollars: price, serialNumber: game.serialNumber)
+                                gameStore.update(game: game, newValue: newGame)
+                            }, label: {
+                                Text("Save")
+                                    .frame(maxWidth: .infinity)
+                            })
+                                .disabled(!shouldEnableSaveButton)
+                        }
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            Button(action: {
+                                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                                    isPhotoPickerActionSheetPresenting = true
+                                } else {
+                                    isPhotoPickerPresenting = true
+                                }
+                            }, label: {
+                                Image(systemName: "camera")
+                            })
+                        }
+                    }
+                    .actionSheet(isPresented: $isPhotoPickerActionSheetPresenting, content: {
+                        createActionSheet()
+                    })
+                    .navigationBarTitleDisplayMode(.inline)
+                            .sheet(isPresented: $isPhotoPickerPresenting, content: {
+                                PhotoPicker(
+                                    sourceType: sourceType,
+                                    imageStore: imageStore,
+                                    game: game,
+                                    selectedPhoto: $selectedPhoto
+             )
+        })
     }
+    
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-         let gameStore = GameStore()
+        let gameStore = GameStore()
+        let imageStore = ImageStore()
         let game = gameStore.createGame()
-        DetailView(game: game, gameStore: gameStore)
+
+        DetailView(game: game, gameStore: gameStore, imageStore: imageStore)
     }
 }
