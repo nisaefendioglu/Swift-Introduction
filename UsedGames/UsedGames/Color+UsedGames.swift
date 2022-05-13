@@ -9,8 +9,11 @@ import SwiftUI
 
 extension Color {
     
-    static var usedGamesWhite: Color {
+    private static var usedGamesWhite: Color {
         return Color("UsedGamesWhite")
     }
     
+    static var barBackgroundColor : Color {
+        return usedGamesWhite
+    }
 }

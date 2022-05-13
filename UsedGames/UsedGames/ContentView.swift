@@ -41,7 +41,7 @@ struct ContentView: View {
                             }).buttonStyle(BorderlessButtonStyle())
                         }
                         .padding()
-                        .background(Color.usedGamesWhite.edgesIgnoringSafeArea(.top))
+                        .background(Color.barBackgroundColor.edgesIgnoringSafeArea(.top))
                         Spacer()
                     }
                 ).actionSheet(item: $gameToDelete) { (game) -> ActionSheet in
