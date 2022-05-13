@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(gameStore.games) { (game) in
-                    NavigationLink(destination : Text(game.name)){
+                    NavigationLink(destination : DetailView(game: game, gameStore: gameStore, name: game.name, price: game.priceInDollars)){
                         GameListItem(game: game)
                     }
             }
